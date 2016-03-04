@@ -17,12 +17,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -46,13 +48,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-
-  <meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 <body>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -61,26 +60,67 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+      <div id="brand">
+        <img src = "images/greenSpider.png">
+        <span>Web Weaver</span>
+      </div>
+      <div id="about" >
+        <div id="name-header">
+          <h1>Chelsea Stauber</h1>
+          <!-- <p>Feel free to download my <a href="#" >cv.pdf</a></p> -->
+          <ul>
+            <!-- <li> <a class="entypo-mail" href="https://twitter.com/chel4Bots"></a> </li>
+            <li> <a class="entypo-mobile" href="https://twitter.com/chel4Bots"></a> </li> -->
+            <li> <a class="entypo-github" target="_blank" href="https://github.com/chelBot" title="View source for this page on GitHub" id="viewSource"></a> </li>
+            <li> <a class="zocial-meetup" target="_blank" href ="http://www.meetup.com/STEM-Enthusiasts/"></a> </li>
+            <li> <a class="entypo-twitter" target="_blank" href="https://twitter.com/chel4Bots"></a> </li>
+<!--             <li> <a><img src = 'images/codepen.pdf' height="12" width="5"> </a> </li> -->
+            <li> <a class="icon" target="_blank" href="http://codepen.io/chelBot/"><i class="fa fa-codepen"></i></a></li>
+
+          </ul> 
+        </div>
+        <hr>
+        <ul id="topContacts" class="flex-box"></ul>
+      </div>
     </div>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+    <div id="contact" class="gray">
+      <a name="contact"></a>
+      <h2>Contact</h2>
+      <div id="gmail">
+        <div class="zocial-gmail contact-entry" id="mail-icon"></div>
+          <div id="address">
+            <h3>stauberc@colorado.edu</h3>
+            <p>Email Address</p>
+          </div>
+      </div>
+      <div id="number">
+      <div class="entypo-mobile contact-entry" id="mobile-icon"></div>
+        <div id = "digits">
+        <h3>720-232-5540</h3>
+        <p>Phone Number</p>
+        </div>
+    </div>
     </div>
     <div id="projects">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="workExperience" class="gray">
+      <h2>Work Experience</h2>
+    </div>
+    <div id="education">
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+    <div id="mapDiv" class="gray">
+      <h2>Where I've Lived, Worked, and Visited</h2>
     </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+    <a href="#contact">
+    <div id="lets-connect">
+      <h2 class="green center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
+    </a>
   </div>
 
   <!--
@@ -115,25 +155,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style.backgroundColor = 'gray';
     }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
+    // if(document.getElementsByTagName('h1').length === 0) {
+    //   document.getElementById('header').style.display = 'none';
+    // }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.backgroundColor = 'gray';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.backgroundColor = 'gray';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.backgroundColor = 'gray';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+      document.getElementById('lets-connect').style.backgroundColor = 'gray';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+      document.getElementById('mapDiv').style.backgroundColor = 'gray';
     }
   </script>
 </body>
