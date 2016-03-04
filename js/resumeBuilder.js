@@ -1,27 +1,22 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-
 var bio = {
-	"name" : "Chelsea Stauber",
-	"role" : "Developer",
-	"contact" : {
-		"number" : "719-232-5544",
-		"email" : "stauberc@colorado.edu",
-		"location" : "Boulder, Colorado",
-	},
+	// "name" : "Chelsea Stauber",
+	// "role" : "Developer",
+	// "contact" : {
+	// 	"number" : "719-232-5544",
+	// 	"email" : "stauberc@colorado.edu",
+	// 	"location" : "Boulder, Colorado",
+	// },
 
-	"pic" : "",
+	// "pic" : "",
 	"message" : "Developer with a sharp attention to detail and a background in geophysical research. "  +
 				"Motivated to develop elegant solutions to  complex problems. Committed to " + 
 				"thorough research and intellectual growth. Deeply curious and adept at learning " +  
 				"new concepts. Experience patiently teaching technical concepts to clients. Strong " +  
 				"written and verbal communication of physical, technical, and mathematical ideas.<br/><br/>"
-				+ "For a more detailed description of my educational and profesional experience, please download my " + 'cv.pdf'.link('#'),
+				+ "For a more detailed description of my educational and profesional experience, please download my " + 'cv.pdf'.link('/../cv/Resume.pdf'),
 	"skills" : ["Frontend Development", "Research", "Algorithms", "OOP", "Website Optimization", "Responsive Design"]
 
 };
-
 var education = {
 	"school" : {
 		"name" : "University of Colorado, Boulder",
@@ -129,7 +124,7 @@ var work = {
 		}
 	}
 }
-//**********DO OBJECT PROPERTIES NEED TO BE IN QUOTES?************
+
 var projects = {
 	"projects" : [
 		{
@@ -172,17 +167,13 @@ var projects = {
 
 }
 
-
 work.display();
-
 
 $(document).click(function(loc) {
 	var x = loc.pageX;
 	var y = loc.pageY;
 	logClicks(x,y);
 });
-
-// $('#main').append(internationalizeButton);
 
 var inName = function() {
 	console.log(bio.name);
@@ -197,10 +188,10 @@ var inName = function() {
 
 projects.display();
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
+// var formattedName = HTMLheaderName.replace("%data%", bio.name);
 // var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-// //svar formattedNumber = HTMLmobil.replace("%data", bio.number);
-var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
+// var formattedNumber = HTMLmobil.replace("%data", bio.number);
+// var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.message);
 
 //$("#header").append(HTMLskillsStart);
