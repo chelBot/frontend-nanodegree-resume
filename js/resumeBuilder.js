@@ -1,19 +1,10 @@
 var bio = {
-	// "name" : "Chelsea Stauber",
-	// "role" : "Developer",
-	// "contact" : {
-	// 	"number" : "719-232-5544",
-	// 	"email" : "stauberc@colorado.edu",
-	// 	"location" : "Boulder, Colorado",
-	// },
-
-	// "pic" : "",
 	"message" : "Developer with a sharp attention to detail and a background in geophysical research. "  +
-				"Motivated to develop elegant solutions to  complex problems. Committed to " + 
-				"thorough research and intellectual growth. Deeply curious and adept at learning " +  
-				"new concepts. Experience patiently teaching technical concepts to clients. Strong " +  
+				"Motivated to develop elegant solutions to  complex problems. Committed to " +
+				"thorough research and intellectual growth. Deeply curious and adept at learning " +
+				"new concepts. Experience patiently teaching technical concepts to clients. Strong " +
 				"written and verbal communication of physical, technical, and mathematical ideas.<br/><br/>"
-				+ "For a more detailed description of my educational and profesional experience, please download my " + 'cv.pdf'.link('/../cv/Resume.pdf'),
+				+ "For a more detailed description of my educational and profesional experience, please download my " + 'resume in PDF.'.link('/../cv/Resume.pdf'),
 	"skills" : ["Frontend Development", "Research", "Algorithms", "OOP", "Website Optimization", "Responsive Design"]
 
 };
@@ -34,13 +25,7 @@ var education = {
 		"year" : "2015",
 		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001#footer-push"
 
-	},
-	// {
-	// 	"school" : "Udacity",
-	// 	"courses" : "How to Use Git and GitHub",
-	// 	"year" : "2015",
-	// 	"url" : "https://www.udacity.com/courses/ud775"
-	// },
+	}
 	],
 	"display" : function(){
 		$("#education").append(HTMLschoolStart);
@@ -63,12 +48,10 @@ var education = {
 				var formattedPad = "<br/>";
 				var conCat = formattedCourse + formattedSchool +  formattedDates + formattedPad;
 				$(".education-entry:last").append(conCat);
-
 		}
 	}
 }
 education.display();
-
 var work = {
 	"jobs" : [
 		{
@@ -77,8 +60,8 @@ var work = {
 			"location" : "Boulder, CO",
 			"dates" : "2014-2015",
 			"description" : "Topics of research included Full Waveform Inversion, Wave Equation Modeling, Microseismic Event Location, " +
-							"Reverse Time Migration, Finite Difference Methods, and Descent Methods. Java implementations included traditional finite " + 
-							"difference scheme for 3D anisotropic " + 
+							"Reverse Time Migration, Finite Difference Methods, and Descent Methods. Java implementations included traditional finite " +
+							"difference scheme for 3D anisotropic " +
 							"pseudo­acoustic wavefield propagation, staggered grid finite " +
 							"difference scheme for 2D isotropic acoustic wavefield " +
 							"propagation, absorbing boundary conditions, conjugate " +
@@ -100,7 +83,7 @@ var work = {
 			"employer" : "JB Saunders",
 			"title" : "Electronics/Hardware Sales",
 			"location" : "Boulder, CO",
-			"dates" : "2013­-2014", 
+			"dates" : "2013­-2014",
 			"description": "I placed orders and made purchasing decisions for all Sparkfun inventory, helped customers find the right parts for " +
 						 	"for their projects, and I assembled electronic and robotic displays.",
 			"url": "http://jbsaundersco.com/"
@@ -109,7 +92,6 @@ var work = {
 	"display" : function() {
 		for(index in work.jobs){
 			$("#workExperience").append(HTMLworkStart);
-			//$("#workExperience").append(HTMLworkLocation);
 
 			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer);
 			var formattedEmployer = formattedEmployer.replace("#", work.jobs[index].url);
@@ -124,32 +106,26 @@ var work = {
 		}
 	}
 }
-
 var projects = {
 	"projects" : [
 		{
 			"title" : "Portfolio Site",
 			"date" : "2016",
-			"description" : "A fully responsive site to showcase some of my work", 
-			"url" : "http://codepen.io/collection/DVvMbJ/2/" 
+			"description" : "A fully responsive site to showcase some of my work",
+			"url" : "http://codepen.io/collection/DVvMbJ/2/"
 		},
 		{
 			"title" : "Natural Simulation Collection",
-			"date" : "2016", 
+			"date" : "2016",
 			"description" : "Pens which use mathematics, processingJS, and JavaScript to create fun visualizations.",
-			"url" : "http://codepen.io/collection/DVvMbJ/2/" 
+			"url" : "http://codepen.io/collection/DVvMbJ/2/"
 		},
 		{
 			"title" : "STEM Enthusiats",
 			"date" : "2015-2016",
 			"description" : "Organize a weekly study group dedicated to solving " + 'Project Euler'.link('https://projecteuler.net/') + " problems using efficient algorithms.",
-			"url" : "http://www.meetup.com/STEM-Enthusiasts/" 
+			"url" : "http://www.meetup.com/STEM-Enthusiasts/"
 		},
-		// {
-		// 	"title" : "GitHub",
-		// 	"date" : "2015",
-		// 	"description" : ""
-		// }
 	],
 	"display" : function(){
 		for(var i in projects.projects){
@@ -160,13 +136,9 @@ var projects = {
 			var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 			var conCat = formattedTitle + formattedDates + formattedDescription;
 			$(".project-entry:last").append(conCat);
-			// $(".project-entry:last").append(formattedDates);
-			// $(".project-entry:last").append(formattedDescription);
 		}
 	}
-
 }
-
 work.display();
 
 $(document).click(function(loc) {
@@ -182,29 +154,14 @@ var inName = function() {
 	var lastName = nameArray[1];
 
 	newName = firstName[0].toUpperCase() + firstName.slice(1).toLowerCase() + " " + lastName.toUpperCase();
-	
+
 	return newName;
 }
-
 projects.display();
 
-// var formattedName = HTMLheaderName.replace("%data%", bio.name);
-// var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-// var formattedNumber = HTMLmobil.replace("%data", bio.number);
-// var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.message);
 
-//$("#header").append(HTMLskillsStart);
-// var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
-// $("#skills").append(formattedSkills);
-
-
-// $("#header").append(formattedRole);
-// $("#about").prepend(formattedName);
-//$("#header").append(formattedPic);
-
 $("#about").append(formattedMessage);
-
 if(bio.skills.length !== 0) {
 	var conCat = "";
 	$("#about").append(HTMLskillsStart);
@@ -212,25 +169,7 @@ if(bio.skills.length !== 0) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 		conCat += formattedSkill;
 	}
-	
 	$("#skills:last").append(conCat);
 }
-
 $("#mapDiv").append(googleMap);
-// //$("#main").append(formattedNumber);
 
-
-// var work = {};
-// var education = {};
-
-// work.position = "Geophysical Developer";
-// work.employer = "XtremeGeo";
-// work.years = "1 year, 3 months";
-// work.city = "Boulder";
-
-// education["name"] = "University of Colorado, Boulder";
-// education["years"] = "2009 - 2013";
-// education["city"] = "Boulder";
-
-// $("#main").append(work["position"]);
-// $("#main").append(education.name);

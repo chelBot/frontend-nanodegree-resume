@@ -1,23 +1,10 @@
 /*
 This file contains all of the code running in the background that makes resumeBuilder.js possible. These are HTML strings.
 */
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span><hr>';
 
-// var HTMLheaderName = '<h1 id="name">%data%</h1><hr>';
-// var HTMLheaderRole = '<span>%data%</span>';
-
-// var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-// var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-// var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-// var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-// var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-// var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-// var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
-
-// var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
-
-var HTMLskillsStart = '<div id= "skill-box" class="flex-box"><a target="_blank" href="../images/spider.jpg" id="skills-h3">Skills at a Glance:</a><ul id="skills" class="flex-box"></ul></div>';
-var HTMLskills = '<li class="flex-item"><span class="gray-text">%data%</span></li>';
+var HTMLskillsStart = '<div id= "skill-box" class="flex-box"><a target="_blank" href="../images/spider.jpg" id="skills-header">Skills at a Glance:</a><ul id="skills" class="flex-box"></ul></div>';
+var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a class="title-link" target="_blank" href="#">%data%';
@@ -63,28 +50,23 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // Do I want to do anything with these clicks? 
+  // Do I want to do anything with these clicks?
 });
 
-var map;  
-/*
-initializeMap() is called when page is loaded.
-*/
+var map;
 function initializeMap() {
-
-  var locations;
-
   var mapOptions = {
     disableDefaultUI: true
   };
 
-  /* 
+  /*
   For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
+  appended to #mapDiv in resumeBuilder.js.
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-  locations = ["Cairo, Egypt", "Dublin, Ireland", "Guildford, England", "Reykjavik, Iceland", "Boulder, CO", "Hilago, Mexico", "Monterrey, Mexico", "Montezuma, Costa Rica", "San Francisco, CA", "Manhattan, New York", "Boston, MA"];
-  
+  var locations = ["Cairo, Egypt", "Dublin, Ireland", "Guildford, England", "Reykjavik, Iceland", "Boulder, CO", "Hilago, Mexico",
+   "Montezuma, Costa Rica", "San Francisco, CA", "Manhattan, New York", "Homer, AK", "Monterrey, Mexico","Boston, MA"];
+
 
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
@@ -133,6 +115,7 @@ function initializeMap() {
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
+      console.log(results[0]);
     }
   }
 
@@ -140,26 +123,48 @@ function initializeMap() {
   pinPoster(locations) takes in the array of locations created by locationFinder()
   and fires off Google place searches for each location
   */
-  function pinPoster(locations) {
+  function pinPoster(locs) {
 
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-    for (var place in locations) {
+      
+      // for (var i = 10; i < locs.length; i++) {
 
-      // the search request object
-      var request = {
-        query: locations[place]
-      };
+      //   // the search request object
+      //   var request = {
+      //     query: locs[i]
+      //   };
+      //   // Actually searches the Google Maps API for location data and runs the callback
+      //   // function with the search results after each search.
+      //   service.textSearch(request, callback);
+       
+      // }
 
-      // Actually searches the Google Maps API for location data and runs the callback
-      // function with the search results after each search.
-      service.textSearch(request, callback);
-    }
+      setTimeout(function(){
+        for(var i = 0; i <= 10; i++){
+          var request = {
+            query: locs[i]
+          };
+        }
+        service.textSearch(request, callback);
+        console.log(request);
+      }, 200);
+      // for (var place in locs) {
+
+      //   // the search request object
+      //   var request = {
+      //     query: locs[place]
+      //   };
+      //   // Actually searches the Google Maps API for location data and runs the callback
+      //   // function with the search results after each search.
+      //   service.textSearch(request, callback);
+       
+      // }
+      
   }
-
   // Sets the boundaries of the map based on pin locations
   window.mapBounds = new google.maps.LatLngBounds();
 

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -13,26 +12,26 @@
 </head>
 <body>
   <div id="main">
-    <div id="header" class="center-content clear-fix">
+    <div id="header" class="center-content clear-fix row">
       <div id="brand">
-        <img src = "images/greenSpider.png">
-        <span class="gray-text" id="weaver">Web Weaver</span>
+        <img class="brand-logo" src="images/greenSpider.png">
+        <span class="brand-subheader">Web Weaver</span>
       </div>
       <div id="about" >
         <div id="name-header">
           <h1>Chelsea Stauber</h1>
           <ul id="icons">
-            <li> <a class="entypo-github" target="_blank" href="https://github.com/chelBot" title="View source for this page on GitHub" id="viewSource"></a> </li>
-            <li> <a class="zocial-meetup" target="_blank" href ="http://www.meetup.com/STEM-Enthusiasts/"></a> </li>
-            <li> <a class="entypo-twitter" target="_blank" href="https://twitter.com/chel4Bots"></a> </li>
-            <li> <a class="icon" target="_blank" href="http://codepen.io/chelBot/"><i class="fa fa-codepen"></i></a></li>
-          </ul> 
+            <li> <a class="social entypo-github" target="_blank" href="https://github.com/chelBot" title="View source for this page on GitHub" id="viewSource"></a> </li>
+            <li> <a class="social zocial-meetup" target="_blank" href ="http://www.meetup.com/STEM-Enthusiasts/"></a> </li>
+            <li> <a class="social entypo-twitter" target="_blank" href="https://twitter.com/chel4Bots"></a> </li>
+            <li> <a class="social icon" target="_blank" href="http://codepen.io/chelBot/"><i class="fa fa-codepen"></i></a></li>
+          </ul>
         </div>
         <hr>
       </div>
     </div>
     <div style="clear: both;"></div>
-    <div id="contact" class="gray">
+    <div id="contact" class="gray row">
       <a name="contact"></a>
       <h2>Contact</h2>
       <div id="gmail">
@@ -50,16 +49,16 @@
         </div>
     </div>
     </div>
-    <div id="projects">
+    <div id="projects" class="row">
       <h2>Projects</h2>
     </div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience" class="gray row">
       <h2>Work Experience</h2>
     </div>
-    <div id="education">
+    <div id="education" class="row">
       <h2>Education</h2>
     </div>
-    <div id="mapDiv" class="gray">
+    <div id="mapDiv" class="gray row">
       <h2>Where I've Lived, Worked, and Traveled</h2>
     </div>
     <a href="#contact">
@@ -86,9 +85,6 @@
     if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.backgroundColor = 'gray';
     }
-    // if(document.getElementsByClassName('flex-item').length === 0) {
-    //   document.getElementById('lets-connect').style.backgroundColor = 'gray';
-    // }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.backgroundColor = 'gray';
     }
