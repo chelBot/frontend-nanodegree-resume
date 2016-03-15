@@ -143,26 +143,26 @@ function initializeMap() {
        
       // }
 
-      setTimeout(function(){
-        for(var i = 0; i <= 10; i++){
-          var request = {
-            query: locs[i]
-          };
-        }
-        service.textSearch(request, callback);
-        console.log(request);
-      }, 200);
-      // for (var place in locs) {
-
-      //   // the search request object
-      //   var request = {
-      //     query: locs[place]
-      //   };
-      //   // Actually searches the Google Maps API for location data and runs the callback
-      //   // function with the search results after each search.
+      // setTimeout(function(){
+      //   for(var i = 0; i <= 10; i++){
+      //     var request = {
+      //       query: locs[i]
+      //     };
+      //   }
       //   service.textSearch(request, callback);
+      //   console.log(request);
+      // }, 200);
+      for (var place in locs) {
+
+        // the search request object
+        var request = {
+          query: locs[place]
+        };
+        // Actually searches the Google Maps API for location data and runs the callback
+        // function with the search results after each search.
+        service.textSearch(request, callback);
        
-      // }
+      }
       
   }
   // Sets the boundaries of the map based on pin locations

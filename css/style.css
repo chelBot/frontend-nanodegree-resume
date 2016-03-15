@@ -241,7 +241,6 @@ a{
 .center-text{
   text-align: center;
 }
-
 .row{
   padding-bottom: 10px;
 }
@@ -251,30 +250,39 @@ a{
   margin: 0 5%;
 }
 #mapDiv{
-  height: 400px;
+  height: 300px;
   width: 100%;
   padding-bottom: 5%;
+  overflow: hidden;
 }
 
 /* Media queries to handle various device widths */
 @media only screen and (max-width: 1200px){
   #main{
     width: 100%;
-    margin:auto;
   }
 }
-@media only screen and (max-width: 1024px){
-  #lets-connect {
-    margin-top: 5%;
+@media only screen and (max-width: 1126px){
+  #skills-header{
+    width: 100%;
+    text-align: center;
+  }
+  #skill-box{
+    flex-direction: column;
+  }
+  #skills{
+    justify-content: center;
+    width: 100%
   }
 }
-@media only screen and (max-width: 750px){
-  #lets-connect {
-    margin-top: 10%;
+@media only screen and (max-width: 450px){
+  #skills{
+    text-align: center;
+    flex-direction: column;
   }
 }
-@media only screen and (min-width: 750px){
-  #skills-header {
-    display: block;
+@media only screen and (max-width: 385px){
+  #icons{
+    display: none;
   }
 }
