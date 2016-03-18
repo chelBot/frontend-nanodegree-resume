@@ -111,7 +111,7 @@ var projects = {
 		{
 			"title" : "Portfolio Site",
 			"date" : "2016",
-			"description" : "A fully responsive site to showcase some of my work.",
+			"description" : "A fully responsive and interactive site to showcase some of my work.",
 			"url" : "http://codepen.io/collection/DVvMbJ/2/"
 		},
 		{
