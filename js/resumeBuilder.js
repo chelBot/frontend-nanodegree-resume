@@ -118,7 +118,7 @@ var projects = {
 			"title" : "Natural Simulation Collection",
 			"date" : "2016",
 			"description" : "Pens which use mathematics, processingJS, and JavaScript to create fun visualizations.",
-			"url" : "http://codepen.io/collection/DVvMbJ/2/"
+			"url" : "http://codepen.io/chelBot/collections/popular/"
 		},
 		{
 			"title" : "STEM Enthusiats",
