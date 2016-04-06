@@ -3,7 +3,7 @@ This file contains all of the code running in the background that makes resumeBu
 */
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span><hr>';
 
-var HTMLskillsStart = '<div id= "skill-box" class="flex-box"><a target="_blank" href="../images/spider.jpg" id="skills-header">Skills at a Glance:</a><ul id="skills" class="flex-box"></ul></div>';
+var HTMLskillsStart = '<div id= "skill-box" class="flex-box"><a target="_blank" href="images/spider.jpg" id="skills-header">Skills at a Glance:</a><ul id="skills" class="flex-box"></ul></div>';
 var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
