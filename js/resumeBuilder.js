@@ -72,7 +72,7 @@ var work = {
 		{
 
 			"employer" : "Modular Robotics",
-			"title" : "Robatics Technician",
+			"title" : "Robotics Technician",
 			"location" : "Boulder, CO",
 			"dates": "2014",
 			"description" : "Daily duties included electronic and mechanical assembly, soldering ciruit boards, bootloading embedded systems, " +
