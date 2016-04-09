@@ -120,6 +120,13 @@ var projects = {
 			"description" : "Pens which use mathematics, processingJS, and JavaScript to create fun visualizations.",
 			"url" : "http://codepen.io/chelBot/collections/popular/"
 		},
+		{	
+			"title": "Anisotropic Acoustic Wave Equation Modeling",
+			"date" : "2015",
+			"description": "The background wave images in the slides where produced from a java application I wrote to study anisotropy.",
+			"url" : "AnisotropicAcousticPP.pdf"
+
+		},
 		{
 			"title" : "STEM Enthusiats",
 			"date" : "2015-2016",
