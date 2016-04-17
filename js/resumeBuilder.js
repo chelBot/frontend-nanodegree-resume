@@ -109,16 +109,16 @@ var work = {
 var projects = {
 	"projects" : [
 		{
+			"title" : "Natural Simulation Collection",
+			"date" : "2016",
+			"description" : "Pens which use Mathematics, Processing.js, and JavaScript to create fun visualizations.",
+			"url" : "http://codepen.io/chelBot/collections/popular/"
+		},
+		{
 			"title" : "Portfolio Site",
 			"date" : "2016",
 			"description" : "A fully responsive and interactive site to showcase some of my work.",
 			"url" : "http://chelbot.webfactional.com/portfolio/"
-		},
-		{
-			"title" : "Natural Simulation Collection",
-			"date" : "2016",
-			"description" : "Pens which use mathematics, processingJS, and JavaScript to create fun visualizations.",
-			"url" : "http://codepen.io/chelBot/collections/popular/"
 		},
 		{	
 			"title": "Anisotropic Acoustic Wave Equation Modeling",
