@@ -65,7 +65,7 @@ function initializeMap() {
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
   var locations = ["Cairo, Egypt", "Dublin, Ireland", "Guildford, England", "Reykjavik, Iceland", "Boulder, CO", "Hilago, Mexico",
-   "Montezuma, Costa Rica", "San Francisco, CA", "Manhattan, New York", "Homer, AK", "Monterrey, Mexico","Boston, MA"];
+   "Montezuma, Costa Rica", "San Francisco, CA", "Manhattan, New York", "Homer, AK", "Monterrey, Mexico","Boston, MA", "Seattle, WA"];
 
 
   /*
@@ -130,7 +130,7 @@ function initializeMap() {
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-      
+
       // for (var i = 10; i < locs.length; i++) {
 
       //   // the search request object
@@ -140,7 +140,7 @@ function initializeMap() {
       //   // Actually searches the Google Maps API for location data and runs the callback
       //   // function with the search results after each search.
       //   service.textSearch(request, callback);
-       
+
       // }
 
       // setTimeout(function(){
@@ -161,9 +161,9 @@ function initializeMap() {
         // Actually searches the Google Maps API for location data and runs the callback
         // function with the search results after each search.
         service.textSearch(request, callback);
-       
+
       }
-      
+
   }
   // Sets the boundaries of the map based on pin locations
   window.mapBounds = new google.maps.LatLngBounds();

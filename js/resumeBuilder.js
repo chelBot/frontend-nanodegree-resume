@@ -55,8 +55,28 @@ education.display();
 var work = {
 	"jobs" : [
 		{
+			"employer" : "Codecademy",
+			"title" : "Advisor",
+			"location" : "New York City, NY",
+			"dates" : "2015-current",
+			"description" : "Provide one-on-one technical advice and code review for online learners. Topics of support include Python, HTML, CSS, JavaScript, Git, the Command Line," +
+							"Angular, and general career guidance. Perform basic support engineering tasks which include answering questions regarding the company's product," +
+							"troubleshooting technical problems encountered by learners, making reports to describe software bugs, staying up-to-date with changes to curriculum and" +
+							"the user experience.",
+			"url" : "https://www.codecademy.com/"
+		},
+		{
+			"employer" : "Two Wires Lab",
+			"title" : "STEM Content Creator",
+			"location" : "Sacramento, CA",
+			"dates" : "2015",
+			"description" : "Designed nodebotics projects and content aimed at teaching children about computing, hardware, and general STEM concepts. These projects were featured in " +
+							"the educational PodPi comics. Helped promote content and was involved in customer outreach.",
+			"url" : "http://www.podpi.com/"
+		},
+		{
 			"employer" : "XtremeGeo",
-			"title" : "Geophysical Developer",
+			"title" : "Geophysical Java Developer",
 			"location" : "Boulder, CO",
 			"dates" : "2014-2015",
 			"description" : "Topics of research included Full Waveform Inversion, Wave Equation Modeling, Microseismic Event Location, " +
@@ -120,7 +140,7 @@ var projects = {
 			"description" : "A fully responsive and interactive site to showcase some of my work.",
 			"url" : "http://chelbot.webfactional.com/portfolio/"
 		},
-		{	
+		{
 			"title": "Anisotropic Acoustic Wave Equation Modeling",
 			"date" : "2015",
 			"description": "The background wave images in the slides where produced from a Java application I wrote to study anisotropy.",
@@ -131,7 +151,7 @@ var projects = {
 			"title" : "STEM Enthusiats",
 			"date" : "2015-2016",
 			"description" : "Organize a weekly study group dedicated to solving " + 'Project Euler'.link('https://projecteuler.net/') + " problems using efficient algorithms.",
-			"url" : "http://www.meetup.com/STEM-Enthusiasts/"
+			"url" : "https://www.meetup.com/Seattle-Robotics-Meetup/"
 		},
 	],
 	"display" : function(){
@@ -179,4 +199,3 @@ if(bio.skills.length !== 0) {
 	$("#skills:last").append(conCat);
 }
 $("#mapDiv").append(googleMap);
-
