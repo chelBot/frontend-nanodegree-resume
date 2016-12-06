@@ -59,9 +59,9 @@ var work = {
 			"title" : "Advisor",
 			"location" : "New York City, NY",
 			"dates" : "2015-current",
-			"description" : "Provide one-on-one technical advice and code review for online learners. Topics of support include Python, HTML, CSS, JavaScript, Git, the Command Line," +
-							"Angular, and general career guidance. Perform basic support engineering tasks which include answering questions regarding the company's product," +
-							"troubleshooting technical problems encountered by learners, making reports to describe software bugs, staying up-to-date with changes to curriculum and" +
+			"description" : "Provide one-on-one technical advice and code review for online learners. Topics of support include Python, HTML, CSS, JavaScript, Git, the Command Line, " +
+							"Angular, and general career guidance. Perform basic support engineering tasks which include answering questions regarding the company's product, " +
+							"troubleshooting technical problems encountered by learners, making reports to describe software bugs, staying up-to-date with changes to curriculum and " +
 							"the user experience.",
 			"url" : "https://www.codecademy.com/"
 		},
