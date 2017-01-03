@@ -56,8 +56,8 @@ var work = {
 	"jobs" : [
 		{
 			"employer" : "Codecademy",
-			"title" : "Advisor",
-			"location" : "New York City, NY",
+			"title" : "Mentor and Advisor",
+			"location" : "REMOTE",
 			"dates" : "2016-current",
 			"description" : "Provide one-on-one technical advice and code review for online learners. Topics of support include Python, HTML, CSS, JavaScript, Git, the Command Line, " +
 							"Angular, and general career guidance. Perform basic support engineering tasks which include answering questions regarding the company's product, " +
@@ -68,7 +68,7 @@ var work = {
 		{
 			"employer" : "Two Wires Lab",
 			"title" : "STEM Content Creator",
-			"location" : "Sacramento, CA",
+			"location" : "REMOTE",
 			"dates" : "2016",
 			"description" : "Designed nodebotics projects and content aimed at teaching children about computing, hardware, and general STEM concepts. These projects were featured in " +
 							"the educational PodPi comics. Helped promote content and was involved in customer outreach.",
