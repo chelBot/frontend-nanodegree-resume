@@ -4,7 +4,7 @@ var bio = {
 				"thorough research and intellectual growth. Deeply curious and adept at learning " +
 				"new concepts. Experience patiently teaching technical concepts to clients. Strong " +
 				"written and verbal communication of physical, technical, and mathematical ideas.<br/><br/>"
-				+ "For a more detailed description of my educational and profesional experience, please download my " + 'resume in PDF.'.link('cv/Resume.pdf'),
+				+ "For a more detailed description of my educational and profesional experience, please download my " + '<a href="cv/Resume.pdf" target="_blank">resume in PDF.</a>',
 	"skills" : ["Frontend Development", "Research", "Algorithms", "OOP", "Website Optimization", "Responsive Design"]
 
 };
@@ -150,7 +150,7 @@ var projects = {
 		{
 			"title" : "STEM Enthusiats",
 			"date" : "2015-2016",
-			"description" : "Organize a weekly study group dedicated to solving " + 'Project Euler'.link('https://projecteuler.net/') + " problems using efficient algorithms.",
+			"description" : "Organize a weekly study group dedicated to solving " + '<a href="https://projecteuler.net/" target="_blank">Project Euler</a>' + " problems using efficient algorithms.",
 			"url" : "https://www.meetup.com/Seattle-Robotics-Meetup/"
 		},
 	],
