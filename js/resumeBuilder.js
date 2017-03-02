@@ -143,7 +143,7 @@ var projects = {
 		{
 			"title": "Anisotropic Acoustic Wave Equation Modeling",
 			"date" : "2015",
-			"description": "The background wave images in the slides where produced from a Java application I wrote to study anisotropy.",
+			"description": "The background wave images in the slides were produced from a Java application I wrote to study anisotropy.",
 			"url" : "AnisotropicAcousticPP.pdf"
 
 		},
