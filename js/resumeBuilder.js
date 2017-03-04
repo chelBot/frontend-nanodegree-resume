@@ -149,7 +149,7 @@ var projects = {
 		},
 		{
 			"title" : "STEM Enthusiats",
-			"date" : "2015-2016",
+			"date" : "2015-current",
 			"description" : "Organize a weekly study group dedicated to solving " + '<a href="https://projecteuler.net/" target="_blank">Project Euler</a>' + " problems using efficient algorithms.",
 			"url" : "https://www.meetup.com/Seattle-Robotics-Meetup/"
 		},
